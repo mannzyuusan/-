@@ -22,10 +22,14 @@ class PostController extends Controller
  * @return Reposnse post view
  */
  
- public function show(Post $post)
- {
+    public function show(Post $post)
+    {
      return view('posts.show')->with(['post'=> $post]);
      //'post'はbladeで使う変数。中身は$postはid=1のpostインスタンス
- }
+    }
+    public function create()
+    {
+    return view('posts.create');
+    }
 }
 
